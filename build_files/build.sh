@@ -15,6 +15,7 @@ dnf -y install evolution
 curl -L -o devpod "https://github.com/loft-sh/devpod/releases/latest/download/devpod-linux-arm64" && sudo install -c -m 0755 devpod /usr/local/bin && rm -f devpod
 mkdir -m 0755 /nix && chown root /nix
 groupadd nixbld
+echo $USER
 curl -L https://nixos.org/nix/install | sh
 # . ~/.nix-profile/etc/profile.d/nix.sh
 
