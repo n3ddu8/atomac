@@ -23,7 +23,9 @@ This setup has only been tested on UTM using Apple Virtualization. If you try it
 7. 	Set up a shared folder if you want to pretend your VM is part of the family.
 8. 	Launch the VM. Full-screen it. Ctrl+Opt releases your soul back to macOS.
 9. 	Install Bluefin as normal. No wizardry required.
-That’s it. No scripts. No YAML. Just vibes.
+10. Run `sudo bootc switch ghcr.io/n3ddu8/atomac`
+
+That’s it. No comlex scripts. No YAML. Just vibes.
 
 ### :crystal_ball: Future Shenanigans
 - Maybe I’ll build a custom ISO. Maybe I won't. Maybe I’ll just keep yelling at Flatpak.
