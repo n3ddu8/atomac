@@ -13,11 +13,10 @@ set -ouex pipefail
 dnf -y install evolution
 
 curl -L -o devpod "https://github.com/loft-sh/devpod/releases/latest/download/devpod-linux-arm64" && sudo install -c -m 0755 devpod /usr/local/bin && rm -f devpod
-mkdir -m 0755 /nix && chown root /nix
-groupadd nixbld
-usermod -aG nixbld root
-whoami
-curl -L https://nixos.org/nix/install | sh
+# mkdir -m 0755 /nix && chown root /nix
+# groupadd nixbld
+# usermod -aG nixbld root
+<(curl -L https://nixos.org/nix/install) --daemon
 # . ~/.nix-profile/etc/profile.d/nix.sh
 
 # Use a COPR Example:
