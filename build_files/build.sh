@@ -16,7 +16,10 @@ curl -L -o devpod "https://github.com/loft-sh/devpod/releases/latest/download/de
 # mkdir -m 0755 /nix && chown root /nix
 # groupadd nixbld
 # usermod -aG nixbld root
-<(curl -L https://nixos.org/nix/install) --daemon
+# <(curl -L https://nixos.org/nix/install) --daemon
+curl -L https://nixos.org/nix/install -o /tmp/nix-install.sh
+bash /tmp/nix-install.sh --daemon
+rm -f /tmp/nix-install.sh
 # . ~/.nix-profile/etc/profile.d/nix.sh
 
 # Use a COPR Example:
