@@ -1,5 +1,5 @@
 # :atom_symbol: Atomac: Atomic Linux, Mac Host, Maximum Sass
-Welcome to Atoma - my arm64-only frankenstein of Project Bluefin LTS, stitched together to run inside a VM on an Apple Mac. Why? Because I’m a maximalist minimalist with opinions. Also because macOS makes me sigh audibly at least twice a day.
+Welcome to Atomac - my arm64-only frankenstein of Project Bluefin LTS, stitched together to run inside a VM on an Apple Mac. Why? Because I’m a maximalist minimalist with opinions. Also because macOS makes me sigh audibly at least twice a day.
 ## :warning: ARM64 ONLY
 If you're rocking x86_64, this ain't it. Go home. Or better yet, go install Nix and rethink your life choices.
 ### :thinking: Why Does This Exist?
@@ -54,4 +54,6 @@ Q: Are you okay?
 
 A: Spiritually? Yes. Emotionally? I’m somewhere between "just one more tweak" and "why is Evolution crashing again?"
 
-Still here? You’re either my kind of person or lost. Either way, welcome to Atomac. May your VM be fast and your dotfiles be ever declarative. :vulcan_salute:
+Still here? You’re either my kind of person or lost. Either way, welcome to Atomac.
+
+:vulcan_salute: May your VM be fast and your dotfiles be ever declarative. :vulcan_salute:
