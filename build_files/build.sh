@@ -20,7 +20,7 @@ if [ ! -d /root ]; then
 fi
 
 # disable SELinux for Nix install
-setenforce 0
+# setenforce 0
 curl -L https://nixos.org/nix/install -o /tmp/nix-install.sh
 bash /tmp/nix-install.sh --daemon
 rm -f /tmp/nix-install.sh
