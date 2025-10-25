@@ -8,6 +8,7 @@ FROM ghcr.io/ublue-os/bluefin-dx:lts
 COPY --from=ctx /nix.sysusers /usr/lib/sysusers.d/nix.conf
 COPY --from=ctx /nix.tmpfiles /usr/lib/tmpfiles.d/nix.conf
 COPY --from=ctx /nix.mount /etc/systemd/system/nix.mount
+COPY --from=ctx /nix.just /usr/share/ublue-os/nix.just
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
