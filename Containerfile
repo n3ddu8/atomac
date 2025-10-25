@@ -23,6 +23,10 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh
+
+COPY --from=ctx /ctx/start-nix.sh /usr/local/bin/start-nix
+RUN chmod +x /usr/local/bin/start-nix
+ENTRYPOINT ["/usr/local/bin/start-nix"]
     
 ### LINTING
 ## Verify final image and contents are correct.
