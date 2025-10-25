@@ -12,6 +12,12 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf -y install evolution
 
+mkdir -p /usr/lib/tmpfiles.d
+cat <<EOF > /usr/lib/tmpfiles.d/dnf.conf
+d /var/lib/dnf 0755 root root -
+d /var/lib/dnf/repos 0755 root root -
+EOF
+
 curl -L -o devpod "https://github.com/loft-sh/devpod/releases/latest/download/devpod-linux-arm64" && install -c -m 0755 devpod /usr/local/bin && rm -f devpod
 
 if [ ! -d /root ]; then
@@ -19,8 +25,12 @@ if [ ! -d /root ]; then
   mkdir -p /root
 fi
 
-# disable SELinux for Nix install
-# setenforce 0
+mkdir -p /usr/lib/sysusers.d
+echo 'g nixbld - -' > /usr/lib/sysusers.d/nixbld.conf
+for i in $(seq 1 32); do
+  echo "u nixbld$i - \"Nix build user\" /nonexistent - nixbld" >> /usr/lib/sysusers.d/nixbld.conf
+done
+
 curl -L https://nixos.org/nix/install -o /tmp/nix-install.sh
 bash /tmp/nix-install.sh --daemon
 rm -f /tmp/nix-install.sh
@@ -37,3 +47,6 @@ rm -f /tmp/nix-install.sh
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+nix-shell -p nix-info --run "nix-info -m"
