@@ -48,4 +48,4 @@ rm -f /tmp/nix-install.sh
 
 systemctl enable podman.socket
 
-sudo nix-shell -p nix-info --run "nix-info -m"
+nix-shell -p nix-info --run "nix-info -m"
