@@ -1,6 +1,6 @@
 # Allow build scripts to be referenced without being copied into the final image
 FROM scratch AS ctx
-COPY build_files /ctx/
+COPY build_files /
 
 # Base Image
 FROM ghcr.io/ublue-os/bluefin-dx:lts
@@ -24,7 +24,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh
 
-COPY --from=ctx /ctx/start-nix.sh /usr/local/bin/start-nix
+COPY --from=ctx /start-nix.sh /usr/local/bin/start-nix
 RUN chmod +x /usr/local/bin/start-nix
 ENTRYPOINT ["/usr/local/bin/start-nix"]
     
