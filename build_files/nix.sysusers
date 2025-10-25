@@ -1,0 +1,2 @@
+g nixbld - - -
+u nixbld - "Nix build user" /var/empty /sbin/nologin
