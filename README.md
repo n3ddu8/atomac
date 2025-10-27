@@ -1,3 +1,5 @@
+** Never got this working with Nix and Homebrew have now dropped (Tier 2) suppor tor aarch64! Archiving **
+
 # :atom_symbol: Atomac: Atomic Linux, Mac Host, Maximum Sass
 Welcome to Atomac - my arm64-only frankenstein of Project Bluefin LTS, stitched together to run inside a VM on an Apple Mac. Why? Because I’m a maximalist minimalist with opinions. Also because macOS makes me sigh audibly at least twice a day.
 ## :warning: ARM64 ONLY
