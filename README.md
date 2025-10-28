@@ -1,18 +1,14 @@
-** Never got this working with Nix and Homebrew have now dropped (Tier 2) suppor tor aarch64! Archiving **
-
 # :atom_symbol: Atomac: Atomic Linux, Mac Host, Maximum Sass
-Welcome to Atomac - my arm64-only frankenstein of Project Bluefin LTS, stitched together to run inside a VM on an Apple Mac. Why? Because I’m a maximalist minimalist with opinions. Also because macOS makes me sigh audibly at least twice a day.
+A light remix of [Project Bluefin LTS](https://projectbluefin.io/) for running inside a VM on my Apple Mac. Why? Because I’m a maximalist minimalist with opinions. Also because macOS makes me sigh audibly at least twice a day.
 ## :warning: ARM64 ONLY
-If you're rocking x86_64, this ain't it. Go home. Or better yet, go install Nix and rethink your life choices.
+If you're rocking x86_64, this ain't it. Go home.
 ### :thinking: Why Does This Exist?
 Because I live in the Apple ecosystem like a well-dressed prisoner. My M4 Mac Mini is a power-sipping marvel that plays nice with my AirPods, iPhone, and the occasional Teams call that doesn’t lag like it’s buffering from 2006. But macOS? It’s like a beautiful house with no furniture. I want my Linux desktop. I want my dotfiles. I want my soul back.
 
-So I built Atomac - a VM-based Linux setup that lets me run Bluefin like a boss while still enjoying the perks of Apple hardware and proprietary software I wish I didn’t need (looking at you, Teams and your 17 Chromium processes).
-
 ### :toolbox: Customisations
-- I use Nix, BTW!
+There isn't really that much customisation, the friendly folks at Bluefin have thought of most things already, I just need:
 - DevPod CLI, because DevPod GUI doesn’t support ARM and I’m allergic to buttons.
-- Evolution, because Gnome Calendars needs it to talk to iCloud CalDav. Yes, it’s Flatpak. Yes, it’s weird. No, I don’t make the rules.
+- Pip, because sometimes I just want to pip install pandas and vibe with a CSV.
 
 ### :computer: Installation Ritual
 This setup has only been tested on UTM using Apple Virtualization. If you try it on VMware or Parallels, may the kernel gods be with you.
@@ -28,10 +24,6 @@ This setup has only been tested on UTM using Apple Virtualization. If you try it
 10. Run `sudo bootc switch ghcr.io/n3ddu8/atomac`
 
 That’s it. No comlex scripts. No YAML. Just vibes.
-
-### :crystal_ball: Future Shenanigans
-- Maybe I’ll build a custom ISO. Maybe I won't. Maybe I’ll just keep yelling at Flatpak.
-- Definitely keep tweaking until it breaks, then fix it with Nix and caffeine.
 
 ### :question: FAQ: Questions You Didn’t Ask But I Answered Anyway
 Q: Why not just use macOS?
@@ -53,10 +45,6 @@ A: Because I love functioning Wi-Fi, graphics acceleration, and not crying into 
 Q: Why is your README so dramatic?
 
 A: Because this is more than a VM - it’s a lifestyle. Also because I’m tired of reading dry documentation that feels like it was written by a toaster.
-
-Q: Are you okay?
-
-A: Spiritually? Yes. Emotionally? I’m somewhere between "just one more tweak" and "why is Evolution crashing again?"
 
 Still here? You’re either my kind of person or lost. Either way, welcome to Atomac.
 
