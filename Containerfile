@@ -1,12 +1,9 @@
+# Allow build scripts to be referenced without being copied into the final image
 FROM scratch AS ctx
 COPY build_files /
-FROM ghcr.io/ublue-os/bluefin-dx:lts
 
-RUN mkdir /nix
-COPY build_files/nix.mount /etc/systemd/system/nix.mount
-COPY build_files/nix.conf /etc/tmpfiles.d/nix.conf
-COPY build_files/nix.just /usr/share/ublue-os/just/100-nix.just
-RUN echo 'import "/usr/share/ublue-os/just/100-nix.just"' >> /usr/share/ublue-os/justfile
+# Base Image
+FROM ghcr.io/ublue-os/bluefin-dx:lts
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
@@ -14,4 +11,5 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh
 
+## Verify final image and contents are correct.
 RUN bootc container lint

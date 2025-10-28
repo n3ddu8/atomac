@@ -7,8 +7,9 @@ Because I live in the Apple ecosystem like a well-dressed prisoner. My M4 Mac Mi
 
 ### :toolbox: Customisations
 There isn't really that much customisation, the friendly folks at Bluefin have thought of most things already, I just need:
+- Chezmoi, because `chezmoi init --apply n3ddu8` should be the only onboarding step I ever need.
 - DevPod CLI, because DevPod GUI doesn’t support ARM and I’m allergic to buttons.
-- Pip, because sometimes I just want to pip install pandas and vibe with a CSV.
+- Pip, because sometimes I just want to `pip install pandas` and vibe with a CSV.
 
 ### :computer: Installation Ritual
 This setup has only been tested on UTM using Apple Virtualization. If you try it on VMware or Parallels, may the kernel gods be with you.
