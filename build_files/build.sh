@@ -24,4 +24,3 @@ wget https://github.com/xremap/xremap/releases/latest/download/xremap-linux-aarc
   && echo 'import "/usr/share/ublue-os/just/100-keybindings.just"'
 
 systemctl enable podman.socket
-
