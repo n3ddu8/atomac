@@ -15,10 +15,9 @@ curl -L -o devpod "https://github.com/loft-sh/devpod/releases/latest/download/de
 wget https://github.com/xremap/xremap/releases/latest/download/xremap-linux-aarch64-gnome.zip \
   && unzip -o ./xremap-linux-aarch64-gnome.zip \
   && cp ./xremap /usr/local/bin \
-  && mkdir -p $HOME/.config/gnome-macos-remap \
-  && cp gnome-macos-remap.yml $HOME/.config/gnome-macos-remap/config.yml \
-  && mkdir -p $HOME/.local/share/systemd/user \
-  && cp gnome-macos-remap.service $HOME/.local/share/systemd/user \
-  && cp bin/*.sh $HOME/.local/bin
+  && mkdir -p /usr/share/atomac/bin \
+  && cp gnome-macos-remap.yml /usr/share/atomac \
+  && cp gnome-macos-remap.service /usr/share/atomac \
+  && cp -r bin /usr/share/atomac/bin
 
 systemctl enable podman.socket

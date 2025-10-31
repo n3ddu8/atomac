@@ -1,4 +1,10 @@
 setup-macos-keybindings:
+    # Copy files
+    mkdir -p $HOME/.config/gnome-macos-remap
+    cp /usr/share/atomac/gnome-macos-remap.yml $HOME/.config/gnome-macos-remap/config.yml
+    mkdir -p $HOME/.local/share/systemd/user
+    cp /usr/share/atomac/gnome-macos-remap.service $HOME/.local/share/systemd/user
+    cp /usr/share/atomac/bin/*.sh $HOME/.local/bin
     # Instantiate the service
     systemctl --user daemon-reload
     systemctl --user enable gnome-macos-remap
