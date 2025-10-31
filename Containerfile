@@ -7,7 +7,7 @@ FROM ghcr.io/ublue-os/bluefin-dx:lts
 
 RUN mkdir -p /usr/share/atomac
 COPY /build_files/gnome-macos-remap.yml /usr/share/atomac
-COPY /build_files/gnome-macos-rename.service /usr/share/atomac
+COPY /build_files/gnome-macos-remap.service /usr/share/atomac
 COPY /build_files/terminal-console-ctrl-d.sh /usr/share/atomac
 
 COPY /build_files/gnome-macos-remap.just /usr/share/ublue-os/just/100-keybindings.just
