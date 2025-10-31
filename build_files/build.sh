@@ -19,8 +19,6 @@ wget https://github.com/xremap/xremap/releases/latest/download/xremap-linux-aarc
   && cp gnome-macos-remap.yml $HOME/.config/gnome-macos-remap/config.yml \
   && mkdir -p $HOME/.local/share/systemd/user \
   && cp gnome-macos-remap.service $HOME/.local/share/systemd/user \
-  && cp bin/*.sh $HOME/.local/bin \
-  && cp gnome-macos-remap.just /usr/share/ublue-os/just/100-keybindings.just \
-  && echo 'import "/usr/share/ublue-os/just/100-keybindings.just"' >> /usr/share/ublue-os/justfile
+  && cp bin/*.sh $HOME/.local/bin
 
 systemctl enable podman.socket
