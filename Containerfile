@@ -5,8 +5,6 @@ COPY build_files /
 # Base Image
 FROM ghcr.io/ublue-os/bluefin-dx:lts
 
-COPY /build_files/gnome-macos-remap.just /usr/share/ublue-os/just/100-keybindings.just
-
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
