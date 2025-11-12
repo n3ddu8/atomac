@@ -1,3 +1,6 @@
+# DEPRECATED
+Switching to a headless build instead - meet [apollo](https://github.com/n3ddu8/apollo), a worksation build of my own custom Fedora IOT image, [blueberry](https://github.com/n3ddu8/blueberry).
+
 # :atom_symbol: Atomac: Atomic Linux, Mac Host, Maximum Sass
 A light remix of [Project Bluefin LTS](https://projectbluefin.io/) for running inside a VM on my Apple Mac. Why? Because I’m a maximalist minimalist with opinions. Also because macOS makes me sigh audibly at least twice a day.
 ## :warning: ARM64 ONLY
